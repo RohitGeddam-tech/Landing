@@ -1,0 +1,126 @@
+.header {
+  width: 100%;
+  display: flex;
+  height: 64px;
+  z-index: 999;
+  position: fixed;
+  background: #ffffff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.headerContainer {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+}
+
+.details a {
+  font-family: Helvetica;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #161c24 !important;
+  margin: 0 30px;
+}
+
+.alignBtn {
+  margin-left: 30px;
+}
+
+.nav {
+  display: none;
+  width: 100%;
+  z-index: 999;
+  position: fixed;
+  background: #ffffff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navContainer {
+  display: block;
+  width: 100%;
+}
+
+.blockContainer {
+  display: flex;
+  height: 64px;
+  width: 100%;
+}
+
+.up {
+  display: flex;
+  width: 100%;
+  height: 64px;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.up button {
+  border: none;
+  background-color: transparent;
+}
+
+.display {
+  width: 15%;
+}
+
+a.head {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+  height: fit-content;
+  align-items: center;
+  color: #ffffff !important;
+  padding: 13px 27px;
+  background: #000000;
+  margin: 0;
+  box-shadow: 1px 3px 4px rgba(145, 158, 171, 0.35);
+  border-radius: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.noname {
+  display: none;
+  height: 0 !important;
+}
+
+@media screen and (max-width: 780px) {
+  .header {
+    height: fit-content !important;
+  }
+  .headerContainer {
+    display: none;
+  }
+  .nav {
+    display: flex !important;
+  }
+  .details {
+    width: 100%;
+    justify-content: space-between;
+    /* padding-top: 15px; */
+  }
+  .details a {
+    padding: 20px 27px;
+    margin: 0 !important;
+  }
+  .details a:hover {
+    background-color: #eee;
+  }
+}

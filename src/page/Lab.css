@@ -1,0 +1,178 @@
+.lab {
+  width: 100%;
+}
+
+.title h1 {
+  padding-top: 30px;
+  text-align: center;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 46px;
+  color: #000000;
+}
+
+.patient {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.imgPatient {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgPatient img {
+  width: 100%;
+}
+
+.imgBranch {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgBranch img {
+  width: 100%;
+}
+
+.branchImg {
+  width: 100%;
+  display: none;
+  /* padding-top: 20px; */
+}
+
+.branchImg img {
+  width: 100%;
+}
+
+.patientDetails {
+  width: 60%;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.patientDetails h1 {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 34px;
+  display: flex;
+  align-items: center;
+  color: #637381;
+  margin-top: 0;
+  padding-bottom: 10px;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.boxImg {
+  width: 70px !important;
+  height: 70px !important;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.boxImg img {
+  width: auto;
+}
+
+.boxDetails {
+  width: 85%;
+}
+
+.boxDetails h1 {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  color: #637381;
+  margin-top: 0;
+  margin-bottom: 5px !important;
+  padding-bottom: 0 !important;
+}
+
+.boxDetails p {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0 !important;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #637381;
+}
+
+.freeHeight{
+  height: 30px;
+}
+
+@media screen and (max-width: 780px) {
+  .title{
+    padding-top: 30px;
+  }
+
+  .freeHeight{
+    height: 64px;
+  }
+
+  .title h1 {
+    width: 90%;
+    margin: auto;
+    padding: 0;
+    font-size: 34px;
+    line-height: 40px;
+    padding: 15px 0;
+  }
+
+  .patient {
+    display: flex;
+    flex-flow: column;
+    width: 95%;
+    padding: 0;
+    padding-top: 10px;
+  }
+
+  .imgPatient {
+    width: 100%;
+  }
+
+  .imgBranch {
+    display: none;
+  }
+
+  .patientDetails {
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  .boxDetails {
+    width: 75%;
+  }
+
+  .branchImg {
+    display: block;
+  }
+}

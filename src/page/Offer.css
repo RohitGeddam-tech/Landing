@@ -1,0 +1,82 @@
+.offer {
+  width: 100%;
+  background-color: #eee;
+  padding-bottom: 30px;
+}
+
+.offerContainer {
+  width: 85%;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.offerContainer h1 {
+  text-align: center;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 46px;
+  color: #000000;
+}
+
+.offerContainer p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  font-family: Helvetica;
+  color: #637381;
+  padding-bottom: 20px;
+}
+
+.offerImg{
+    display: flex;
+    justify-content: space-between;
+}
+
+.img1{
+    width: 48%;
+}
+
+.img1 img{
+    width: 100%;
+}
+
+.img2{
+    width: 48%;
+}
+
+.img2 img{
+    width: 100%;
+}
+
+.imgOffer{
+  width: 80%;
+  margin: auto;
+  display: none;
+}
+
+@media screen and (max-width:780px){
+  .img1{
+    width: 95%;
+    margin: auto;
+  }
+
+  .offer{
+    padding-bottom: 0;
+  }
+
+  .offerContainer{
+    width: 95%;
+  }
+
+  .imgOffer{
+    display: block;
+  }
+
+  .offerImg{
+    display: none;
+  }
+}
