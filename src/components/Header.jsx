@@ -39,7 +39,7 @@ const Header = () => {
             <NavHashLink
               to="/Landing#top"
               className="imgHeader"
-              onClick={() => setActive(!isActive)}
+              onClick={() => setActive(false)}
             >
               <img src={logo} alt="logo" />
             </NavHashLink>
@@ -49,19 +49,19 @@ const Header = () => {
             <div className="details">
               <NavHashLink
                 to="/Landing#features"
-                onClick={() => setActive(!isActive)}
+                onClick={() => setActive(false)}
               >
                 Features
               </NavHashLink>
               <NavHashLink
                 to="/Landing#free"
-                onClick={() => setActive(!isActive)}
+                onClick={() => setActive(false)}
               >
                 Free Website
               </NavHashLink>
               <NavHashLink
                 to="/Landing#price"
-                onClick={() => setActive(!isActive)}
+                onClick={() => setActive(false)}
               >
                 Pricing
               </NavHashLink>
