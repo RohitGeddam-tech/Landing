@@ -64,6 +64,11 @@
     margin: auto;
   }
 
+  .offerContainer h1{
+    font-size: 30px;
+    line-height: 34px;
+  }
+
   .offer{
     padding-bottom: 0;
   }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
+// import useToggle from './Valid'
 
 
 const Form = () => {
@@ -9,9 +10,12 @@ const Form = () => {
   const [nameInvalid, setNameInvalid] = useState(false);
   const [phoneNoInvalid, setPhoneNoInvalid] = useState(false);
   const [emailIDInvalid, setEmailIDInvalid] = useState(false);
-  const [validity, setValidity] = useState(false);
+  // const [validity, setValidity] = useState(false);
+  const [isValid, setIsValid] = useState(false)
   const [form, setForm] = useState({});
   const [formEmpty, setFormEmpty] = useState(false);
+
+  // const [isOn, toggleIsOn] = useToggle();
 
   // const classes = useStyles();
 
@@ -34,35 +38,41 @@ const Form = () => {
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (Object.values(form).every((each) => each === "")) {
-      setFormEmpty(true);
-      setValidity(false);
-    } else {
-      setFormEmpty(false);
-    }
+  console.log('form value', form)
+  // const toggle = React.useCallback(() => setIsValid(!isValid))
 
-    if (!(nameInvalid || phoneNoInvalid || emailIDInvalid)) {
-      setValidity(true);
+  const handleSubmit = (e) => {
+
+    if (!(nameInvalid && phoneNoInvalid && emailIDInvalid)) {
+      setIsValid(!isValid);
       setForm({
         name: name.charAt(0).toUpperCase() + name.slice(1),
         phoneNo: phoneNo,
         emailID: emailID,
       });
+      console.log('validity true')
     } else {
-      setValidity(false);
+      setIsValid(false);
+      console.log('validity false')
+    }
+    console.log('vaidity trueor false: ', !isValid)
+
+    if(isValid === false){
+      setFormEmpty(false);
+      setIsValid(false);
+    } else {
+      setFormEmpty(true);
     }
 
-    console.log(form);
+    e.preventDefault();
+    console.log('data: ',name,phoneNo,emailID)
+    console.log('formempty',formEmpty)
   };
 
   return (
     <form
       className='formContainer'
       onSubmit={handleSubmit}
-      noValidate
-      autoComplete="off"
     >
       <p className='para'>Want us to call you? Fill in your details</p>
       <TextField
@@ -122,7 +132,7 @@ const Form = () => {
       )}
       <div className='alignbtn'>
         <button type="submit" className="button">
-          Submit
+          Send
         </button>
       </div>
       {formEmpty ? <p className='p'>Please fill in the form</p> : ""}

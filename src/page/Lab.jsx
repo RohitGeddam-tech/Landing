@@ -1,8 +1,11 @@
 import React from "react";
 // import empty from "../images/emptybox.jpg";
-import clock from "../images/clock.jpg";
-import share from "../images/shareReports.jpg";
-import ruppee from "../images/ruppee.jpg";
+import clock from "../images/clock.png";
+import share from "../images/share.png";
+import ruppee from "../images/rupee.png";
+import hospital from "../images/hospital.png";
+import people from "../images/people.png";
+import circle from "../images/circle.png";
 import calender from '../images/Calendar.jpg'
 import map from '../images/Map.jpg'
 import "./Lab.css";
@@ -69,7 +72,7 @@ const Lab = () => {
           <div className="patinetInfo">
             <div className="box">
               <div className="boxImg">
-                <img src={clock} alt="clock" />
+                <img src={hospital} alt="clock" />
               </div>
               <div className="boxDetails">
                 <h1>All your branches in one place</h1>
@@ -81,7 +84,7 @@ const Lab = () => {
             </div>
             <div className="box">
               <div className="boxImg">
-                <img src={share} alt="shareReports" />
+                <img src={people} alt="shareReports" />
               </div>
               <div className="boxDetails">
                 <h1>Separate login access for different users</h1>
@@ -94,7 +97,7 @@ const Lab = () => {
             </div>
             <div className="box">
               <div className="boxImg">
-                <img src={ruppee} alt="rupee" />
+                <img src={circle} alt="rupee" />
               </div>
               <div className="boxDetails">
                 <h1>Statistics & Graphs</h1>

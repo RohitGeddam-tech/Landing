@@ -71,7 +71,7 @@ a.button {
   cursor: pointer;
 }
 
-.footer a.blackBtn{
+.footer button.blackBtn{
   font-family: Helvetica;
   font-style: normal;
   font-weight: bold;

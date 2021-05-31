@@ -12,16 +12,16 @@ const Contact = () => {
         <h1>Contact us for a free demo </h1>
         <div className="mobInfo">
           <div className="infoBox">
-            <a href="tel:+18008917834">
+            {/* <a href="tel:+18008917834">
               <img src={call} alt="call" />
-            </a>
+            </a> */}
             <div>
               <h1>Call Us On :</h1>
               <a href="tel:+18008917834">+18008917834</a>
             </div>
-            <button>
-              Call Number <img src={call} alt="call" />{" "}
-            </button>
+            <a href="tel:+18008917834" className='infoBtn'>
+                Call Number <img src={call} alt="call" />{" "}
+            </a>
           </div>
         </div>
         <div className="newOr">
