@@ -22,6 +22,9 @@ const Banner = () => {
           <img src={banner} alt="banner" />
         </div>
       </div>
+      <div className="rightBanner">
+          <img src={banner} alt="banner" />
+        </div>
       <div className="featureHeight" id="features"></div>
     </div>
   );
