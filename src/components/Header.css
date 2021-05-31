@@ -31,6 +31,7 @@
   display: flex;
   align-items: center;
   text-transform: capitalize;
+  white-space: nowrap;
   color: #161c24 !important;
   margin: 0 30px;
 }
@@ -78,6 +79,7 @@
 }
 
 a.head {
+  white-space: nowrap;
   font-family: Helvetica;
   font-style: normal;
   font-weight: bold;
@@ -101,7 +103,7 @@ a.head {
   height: 0 !important;
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 860px) {
   .header {
     height: fit-content !important;
   }

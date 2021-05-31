@@ -11,7 +11,7 @@ const PriceSlider = () => {
     infinite: false,
     speed: 500,
     slidesToShow: 2,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     initialSlide: 0,
     responsive: [
       {
