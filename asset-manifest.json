@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/Landing/static/css/main.e4c18676.chunk.css",
+    "main.js": "/Landing/static/js/main.11719c03.chunk.js",
+    "main.js.map": "/Landing/static/js/main.11719c03.chunk.js.map",
+    "runtime-main.js": "/Landing/static/js/runtime-main.a555a784.js",
+    "runtime-main.js.map": "/Landing/static/js/runtime-main.a555a784.js.map",
+    "static/css/2.e84f0e0d.chunk.css": "/Landing/static/css/2.e84f0e0d.chunk.css",
+    "static/js/2.2de83a59.chunk.js": "/Landing/static/js/2.2de83a59.chunk.js",
+    "static/js/2.2de83a59.chunk.js.map": "/Landing/static/js/2.2de83a59.chunk.js.map",
+    "index.html": "/Landing/index.html",
+    "static/css/2.e84f0e0d.chunk.css.map": "/Landing/static/css/2.e84f0e0d.chunk.css.map",
+    "static/css/main.e4c18676.chunk.css.map": "/Landing/static/css/main.e4c18676.chunk.css.map",
+    "static/js/2.2de83a59.chunk.js.LICENSE.txt": "/Landing/static/js/2.2de83a59.chunk.js.LICENSE.txt",
+    "static/media/Banner.e062754d.jpg": "/Landing/static/media/Banner.e062754d.jpg",
+    "static/media/Calendar.2e3abca6.jpg": "/Landing/static/media/Calendar.2e3abca6.jpg",
+    "static/media/Map.1fd6c829.jpg": "/Landing/static/media/Map.1fd6c829.jpg",
+    "static/media/logo.4bbe60a7.jpg": "/Landing/static/media/logo.4bbe60a7.jpg",
+    "static/media/slick-theme.css": "/Landing/static/media/slick.c94f7671.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a555a784.js",
+    "static/css/2.e84f0e0d.chunk.css",
+    "static/js/2.2de83a59.chunk.js",
+    "static/css/main.e4c18676.chunk.css",
+    "static/js/main.11719c03.chunk.js"
+  ]
+}
