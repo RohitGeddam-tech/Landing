@@ -1,50 +1,6 @@
 import React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
-import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles((theme) => ({
-  container: {
-    display: "flex",
-    flexFlow: "column",
-    backgroundColor: "white",
-    width: "40%",
-    // margin: "auto",
-    // alignItems: "center",
-    borderRadius: "3px",
-  },
-  textField: {
-    margin: "auto",
-    marginTop: theme.spacing(1),
-    marginBottom: theme.spacing(1),
-    width: "100%",
-    outline: "none",
-  },
-  p: {
-    fontFamily: "Montserrat",
-    fontStyle: "normal",
-    fontWeight: "normal",
-    fontSize: "16px",
-    lineHeight: "20px",
-    textAlign: "center",
-    color: "red",
-  },
-  alignbtn: {
-      width:'100%',
-    marginTop: theme.spacing(1),
-    display:'flex',
-    alignItems:'flex-end',
-    justifyContent:'flex-end'
-  },
-  para: {
-    fontFamily: "helvetica",
-    fontStyle: "normal",
-    fontWeight: "bold",
-    fontSize: "16px",
-    lineHeight: "18px",
-    textAlign: "start",
-    color: "#000000",
-  },
-}));
 
 const Form = () => {
   const [name, setName] = useState("");
@@ -57,7 +13,7 @@ const Form = () => {
   const [form, setForm] = useState({});
   const [formEmpty, setFormEmpty] = useState(false);
 
-  const classes = useStyles();
+  // const classes = useStyles();
 
   const handleChange = (e) => {
     switch (e.target.name) {
@@ -103,17 +59,17 @@ const Form = () => {
 
   return (
     <form
-      className={classes.container}
+      className='formContainer'
       onSubmit={handleSubmit}
       noValidate
       autoComplete="off"
     >
-      <p className={classes.para}>Want us to call you? Fill in your details</p>
+      <p className='para'>Want us to call you? Fill in your details</p>
       <TextField
         id="outlined-basic"
         label="Name"
         variant="outlined"
-        className={classes.textField}
+        className='textField'
         name="name"
         value={name}
         onChange={handleChange}
@@ -122,7 +78,7 @@ const Form = () => {
         required
       />
       {nameInvalid ? (
-        <p className={classes.p}>Please provide a valid name</p>
+        <p className='p'>Please provide a valid name</p>
       ) : (
         ""
       )}
@@ -131,7 +87,7 @@ const Form = () => {
         label="Email"
         variant="outlined"
         name="emailID"
-        className={classes.textField}
+        className='textField'
         value={emailID}
         onChange={handleChange}
         inputProps={{
@@ -141,7 +97,7 @@ const Form = () => {
         required
       />
       {emailIDInvalid ? (
-        <p className={classes.p}>Please provide a valid email</p>
+        <p className='p'>Please provide a valid email</p>
       ) : (
         ""
       )}
@@ -149,7 +105,7 @@ const Form = () => {
         id="outlined-basic"
         label="Phone No."
         variant="outlined"
-        className={classes.textField}
+        className='textField'
         name="phoneNo"
         value={phoneNo}
         onChange={handleChange}
@@ -160,16 +116,16 @@ const Form = () => {
         required
       />
       {phoneNoInvalid ? (
-        <p className={classes.p}>Please provide a valid mobile number</p>
+        <p className='p'>Please provide a valid mobile number</p>
       ) : (
         ""
       )}
-      <div className={classes.alignbtn}>
+      <div className='alignbtn'>
         <button type="submit" className="button">
           Submit
         </button>
       </div>
-      {formEmpty ? <p className={classes.p}>Please fill in the form</p> : ""}
+      {formEmpty ? <p className='p'>Please fill in the form</p> : ""}
     </form>
   );
 };

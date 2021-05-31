@@ -2,7 +2,7 @@ import React from "react";
 import "./Contact.css";
 import call from "../images/call.jpg";
 import mail from "../images/Mail.jpg";
-import Form from "./Form";
+import Form from "../components/Form";
 // import Button from "../components/Button";
 
 const Contact = () => {

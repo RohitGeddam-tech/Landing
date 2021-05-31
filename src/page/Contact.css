@@ -125,9 +125,57 @@
   /* margin: auto; */
 }
 
-.mobInfo{
+.mobInfo {
   width: 100%;
   display: none;
+}
+
+.formContainer {
+  display: flex;
+  flex-flow: column;
+  background-color: white;
+  width: 40%;
+  border-radius: 3px;
+}
+
+.textField {
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  outline: none;
+}
+
+.p {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: red;
+}
+
+.alignbtn {
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.para {
+  font-family: helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: start;
+  color: #000000;
+}
+
+.MuiFormControl-root{
+  margin: 10px 0 !important;
 }
 
 @media screen and (max-width: 780px) {
@@ -157,17 +205,26 @@
     padding-bottom: 30px;
   }
 
+  .formContainer{
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .MuiFormControl-root{
+    width: 100%;
+  }
+
   .newOr {
     display: flex;
     padding: 10px 0;
     justify-content: center;
   }
 
-  .newOr h1{
+  .newOr h1 {
     margin-bottom: 0;
   }
 
-  .makeStyles-para-5{
+  .makeStyles-para-5 {
     margin-top: 0 !important;
   }
 
@@ -179,7 +236,7 @@
     display: none;
   }
 
-  .mobInfo{
+  .mobInfo {
     display: flex;
   }
 }
