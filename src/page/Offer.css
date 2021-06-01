@@ -1,6 +1,6 @@
 .offer {
   width: 100%;
-  background-color: #eee;
+  background-color: rgba(54, 132, 209, 0.1);
   padding-bottom: 30px;
 }
 
@@ -17,7 +17,7 @@
   font-weight: bold;
   font-size: 40px;
   line-height: 46px;
-  color: #000000;
+  color: #3684D1;
 }
 
 .offerContainer p {
@@ -87,6 +87,7 @@
 
   .offerContainer {
     width: 95%;
+    padding-bottom: 0;
   }
 
   .imgOffer {

@@ -2,7 +2,7 @@ import React from "react";
 import "./Contact.css";
 import call from "../images/call.jpg";
 import mail from "../images/Mail.jpg";
-import callBtn from "../images/callBtn.png";
+import callBtn from "../images/blueCallBtn.svg";
 import Form from "../components/Form";
 // import Button from "../components/Button";
 
@@ -18,9 +18,9 @@ const Contact = () => {
             </a> */}
             <div>
               <h1>Call Us On :</h1>
-              <a href="tel:+18008917834">+18008917834</a>
+              <a href="tel:18008910235">18008910235</a>
             </div>
-            <a href="tel:+18008917834" className='infoBtn'>
+            <a href="tel:18008910235" className='infoBtn'>
               <img src={callBtn} alt="call" />
             </a>
           </div>
@@ -35,12 +35,12 @@ const Contact = () => {
           </div>
           <div className="contactInfo">
             <div className="infoBox">
-              <a href="tel:+18008917834">
+              <a href="tel:18008910235">
                 <img src={call} alt="call" />
               </a>
               <div>
                 <h1>Call Us On :</h1>
-                <a href="tel:+18008917834">+18008917834</a>
+                <a href="tel:18008910235">18008910235</a>
               </div>
             </div>
             <div className="infoBox">

@@ -10,7 +10,7 @@
   font-weight: bold;
   font-size: 40px;
   line-height: 46px;
-  color: #000000;
+  color: #3684D1;
 }
 
 .patient {
@@ -69,7 +69,7 @@
   line-height: 34px;
   display: flex;
   align-items: center;
-  color: #637381;
+  color: #3684D1;
   margin-top: 0;
   padding-bottom: 10px;
 }
@@ -107,7 +107,7 @@
   line-height: 18px;
   display: flex;
   align-items: center;
-  color: #637381;
+  color: #3684D1;
   margin-top: 0;
   margin-bottom: 5px !important;
   padding-bottom: 0 !important;

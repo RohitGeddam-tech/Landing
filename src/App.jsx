@@ -28,7 +28,7 @@ function App() {
         <button className="blackBtn" onClick={()=>document.getElementById("btn").scrollIntoView({behavior:'smooth'})}>
           Get a Free Demo
         </button>
-        <a href="tel:+18008917834" className="whiteBtn">
+        <a href="tel:18008910235" className="whiteBtn">
           Call Us
         </a>
       </div>

@@ -1,11 +1,11 @@
 import React from "react";
 // import empty from "../images/emptybox.jpg";
-import clock from "../images/clock.png";
-import share from "../images/share.png";
-import ruppee from "../images/rupee.png";
-import hospital from "../images/hospital.png";
-import people from "../images/people.png";
-import circle from "../images/circle.png";
+import clock from "../images/Appointment.png";
+import share from "../images/Send.png";
+import ruppee from "../images/Payment.png";
+import hospital from "../images/blueHosp.png";
+import people from "../images/bluePeople.png";
+import circle from "../images/blueCircle.png";
 import calender from '../images/Calendar.jpg'
 import map from '../images/Map.jpg'
 import "./Lab.css";

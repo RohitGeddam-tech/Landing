@@ -14,10 +14,11 @@
   align-items: center;
   color: #ffffff !important;
   padding: 13px 27px;
-  background: #000000;
+  background: linear-gradient(135deg, #64AAE3 0%, #1B4C96 100%);
   box-shadow: 1px 3px 4px rgba(145, 158, 171, 0.35);
   border-radius: 10px;
-  border: 1px solid black;
+  border: none;
+  /* border: 1px solid black; */
   cursor: pointer;
 }
 
@@ -32,10 +33,13 @@ a.button {
   align-items: center;
   color: #ffffff !important;
   padding: 13px 27px;
-  background: #000000;
+  background: linear-gradient(135deg, #64AAE3 0%, #1B4C96 100%);
+  /* background: linear-gradient(135deg, #64AAE3 0%, #1B4C96 100%); */
   box-shadow: 1px 3px 4px rgba(145, 158, 171, 0.35);
   border-radius: 10px;
-  border: 1px solid black;
+  outline: none !important;
+  border: none;
+  /* border: 1px solid black; */
   cursor: pointer;
 }
 
@@ -59,14 +63,14 @@ a.button {
   display: flex;
   height: fit-content;
   align-items: center;
-  color: #000;
+  color: #3684D1;
   padding: 13px 0;
   width: 35%;
   justify-content: center;
   background: transparent;
   box-shadow: 1px 3px 4px rgba(145, 158, 171, 0.35);
   border-radius: 10px;
-  border: 1px solid black;
+  border: 1px solid #3684D1;
   text-decoration: none;
   cursor: pointer;
 }
@@ -85,9 +89,10 @@ a.button {
   width: 55%;
   justify-content: center;
   background: black;
-  box-shadow: 1px 3px 4px rgba(145, 158, 171, 0.35);
+  background: linear-gradient(135deg, #64AAE3 0%, #1B4C96 100%);
   border-radius: 10px;
-  border: 1px solid black;
+  border: none;
+  /* border: 1px solid black; */
   text-decoration: none;
   cursor: pointer;
 }
@@ -111,6 +116,11 @@ a{
   right: -25px;
 }
 
+.slickNext img{
+  width: 40px !important;
+  height: 40px !important;
+}
+
 .slickPrev {
   position: absolute;
   display: block !important;
@@ -124,6 +134,11 @@ a{
   outline: none;
   background: transparent;
   left: -43px;
+}
+
+.slickPrev img{
+  width: 40px !important;
+  height: 40px !important;
 }
 
 .footer button.button{
