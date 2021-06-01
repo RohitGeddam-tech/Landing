@@ -2,6 +2,7 @@ import React from "react";
 import "./Contact.css";
 import call from "../images/call.jpg";
 import mail from "../images/Mail.jpg";
+import callBtn from "../images/callBtn.png";
 import Form from "../components/Form";
 // import Button from "../components/Button";
 
@@ -20,7 +21,7 @@ const Contact = () => {
               <a href="tel:+18008917834">+18008917834</a>
             </div>
             <a href="tel:+18008917834" className='infoBtn'>
-                Call Number <img src={call} alt="call" />{" "}
+              <img src={callBtn} alt="call" />
             </a>
           </div>
         </div>

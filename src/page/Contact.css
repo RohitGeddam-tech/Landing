@@ -102,27 +102,14 @@
 
 .infoBox a.infoBtn {
   outline: none;
-  border: 1px solid black;
-  background: #000000 !important;
-  color: white;
-  display: flex;
-  align-items: center;
+  border: none;
   margin-left: 10%;
-  white-space: nowrap;
-  border-radius: 10px;
-  font-family: Helvetica;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 18px;
-  padding: 7px 27px;
-  padding-left: 18px;
 }
 
 .infoBox a.infoBtn img {
-  margin-left: 10%;
   margin-right: 0 !important;
-  /* margin: auto; */
+  width: auto !important;
+  height: 50px;
 }
 
 .mobInfo {

@@ -38,7 +38,7 @@ const Form = () => {
     }
   };
 
-  console.log('form value', form)
+  // console.log('form value', form)
   // const toggle = React.useCallback(() => setIsValid(!isValid))
 
   const handleSubmit = (e) => {
@@ -50,12 +50,10 @@ const Form = () => {
         phoneNo: phoneNo,
         emailID: emailID,
       });
-      console.log('validity true')
     } else {
       setIsValid(false);
-      console.log('validity false')
     }
-    console.log('vaidity trueor false: ', !isValid)
+    // console.log('vaidity trueor false: ', !isValid)
 
     if(isValid === false){
       setFormEmpty(false);
@@ -65,8 +63,8 @@ const Form = () => {
     }
 
     e.preventDefault();
-    console.log('data: ',name,phoneNo,emailID)
-    console.log('formempty',formEmpty)
+    // console.log('data: ',name,phoneNo,emailID)
+    // console.log('formempty',formEmpty)
   };
 
   return (

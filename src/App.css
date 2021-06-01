@@ -96,6 +96,36 @@ a{
   text-decoration: none;
 }
 
+.slickNext {
+  position: absolute;
+  display: block !important;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  top: 45%;
+  transform: translate(0, -45%);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: transparent;
+  right: -25px;
+}
+
+.slickPrev {
+  position: absolute;
+  display: block !important;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  top: 45%;
+  transform: translate(0, -45%);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: transparent;
+  left: -43px;
+}
+
 .footer button.button{
   font-family: Helvetica;
   font-style: normal;

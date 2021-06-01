@@ -3,6 +3,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import offer from "../images/offer.jpg";
+import SliderNextArrow from "./NextArrow";
+import SliderPrevArrow from "./PrevArrow";
 
 const SliderContent = () => {
   return (
@@ -22,6 +24,8 @@ const SlickSlider = () => {
     slidesToShow: 2,
     slidesToScroll: 2,
     initialSlide: 0,
+    nextArrow: <SliderNextArrow />,
+    prevArrow: <SliderPrevArrow />,
     responsive: [
       {
         breakpoint: 780,

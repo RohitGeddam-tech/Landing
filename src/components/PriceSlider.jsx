@@ -4,6 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import check from "../images/check.jpg";
 import Button from "./Button";
+import SliderNextArrow from "./NextArrow";
+import SliderPrevArrow from "./PrevArrow";
 
 const PriceSlider = () => {
   const settings = {
@@ -13,6 +15,8 @@ const PriceSlider = () => {
     slidesToShow: 2,
     slidesToScroll: 1,
     initialSlide: 0,
+    nextArrow: <SliderNextArrow />,
+    prevArrow: <SliderPrevArrow />,
     responsive: [
       {
         breakpoint: 780,
