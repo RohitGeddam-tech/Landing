@@ -69,10 +69,11 @@ a.button {
   padding: 13px 0;
   width: 60%;
   justify-content: center;
-  background: #3684D1;
+  background: linear-gradient(135deg, #64AAE3 0%, #1B4C96 100%);
   box-shadow: 1px 3px 4px rgba(145, 158, 171, 0.35);
   border-radius: 10px;
-  border: 1px solid #3684D1;
+  border: none;
+  /* border: 1px solid #3684D1; */
   text-decoration: none;
   cursor: pointer;
 }
