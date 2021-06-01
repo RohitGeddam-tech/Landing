@@ -64,17 +64,21 @@ a.button {
   display: flex;
   height: fit-content;
   align-items: center;
-  color: #3684D1;
+  color: #fff;
   margin-left: 30px;
   padding: 13px 0;
-  width: 53%;
+  width: 60%;
   justify-content: center;
-  background: transparent;
+  background: #3684D1;
   box-shadow: 1px 3px 4px rgba(145, 158, 171, 0.35);
   border-radius: 10px;
   border: 1px solid #3684D1;
   text-decoration: none;
   cursor: pointer;
+}
+
+.wrap_1b90._orientationRight_fe10.__jivoMobileButton{
+  bottom: -5px !important;
 }
 
 .slick-slider button{
