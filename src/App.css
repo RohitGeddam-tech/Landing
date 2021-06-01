@@ -52,6 +52,7 @@ a.button {
   top: 88%;
   align-items: center;
   justify-content: flex-start;
+  z-index: 999;
 }
 
 .footer a.whiteBtn {
