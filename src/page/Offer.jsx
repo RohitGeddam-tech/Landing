@@ -1,7 +1,8 @@
 import React from "react";
 import offer from "../images/offer.jpg";
 import "./Offer.css";
-import OfferSlider from '../components/OfferSlider'
+// import OfferSlider from '../components/OfferSlider'
+import Button from "../components/Button";
 
 const Offer = () => {
   return (
@@ -20,8 +21,11 @@ const Offer = () => {
             <img src={offer} alt="empty" />
           </div>
         </div>
-        <div className='imgOffer'>
+        {/* <div className='imgOffer'>
           <OfferSlider />
+        </div> */}
+        <div className='offerAlign'>
+          <Button name='Get in now' />
         </div>
       </div>
       <div className='freeHeight' id='price'></div>

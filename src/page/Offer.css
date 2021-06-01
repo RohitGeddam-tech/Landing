@@ -58,7 +58,19 @@
   display: none;
 }
 
+.offerAlign{
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
 @media screen and (max-width: 780px) {
+
+  .offerAlign{
+    display: flex !important;
+  }
+
   .img1 {
     width: 95%;
     margin: auto;
