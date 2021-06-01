@@ -1,5 +1,5 @@
 import React from "react";
-import next from "../images/Next.png";
+import next from "../images/next.png";
 
 const SliderNextArrow = (props) => {
   const { onClick } = props;
@@ -12,9 +12,9 @@ const SliderNextArrow = (props) => {
       style={{ display: "block" }}
       onClick={onClick}
     >
-      <span>
+      {/* <span> */}
         <img src={next} alt="banner" />
-      </span>
+      {/* </span> */}
     </button>
   );
 };

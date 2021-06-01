@@ -77,6 +77,11 @@ a.button {
   cursor: pointer;
 }
 
+.slick-slider button{
+  width: 40px !important;
+  height: 40px !important;
+}
+
 .footer button.blackBtn{
   font-family: Helvetica;
   font-style: normal;
@@ -115,7 +120,7 @@ a{
   border: none;
   outline: none;
   background: transparent;
-  right: -25px;
+  right: -40px;
 }
 
 .slickNext img{

@@ -1,5 +1,5 @@
 import React from "react";
-import prev from "../images/Prev.png";
+import prev from "../images/prev.png";
 
 const SliderPrevArrow = (props) => {
   const { onClick } = props;
@@ -12,9 +12,9 @@ const SliderPrevArrow = (props) => {
       style={{ display: "block" }}
       onClick={onClick}
     >
-      <span>
+      {/* <span> */}
         <img src={prev} alt="banner" />
-      </span>
+      {/* </span> */}
     </button>
   );
 };
