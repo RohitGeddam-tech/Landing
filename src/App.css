@@ -49,9 +49,9 @@ a.button {
   position: fixed;
   bottom: 0;
   background-color: #eee;
-  top: 90%;
+  top: 88%;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
 
 .footer a.whiteBtn {
@@ -64,8 +64,9 @@ a.button {
   height: fit-content;
   align-items: center;
   color: #3684D1;
+  margin-left: 30px;
   padding: 13px 0;
-  width: 35%;
+  width: 53%;
   justify-content: center;
   background: transparent;
   box-shadow: 1px 3px 4px rgba(145, 158, 171, 0.35);

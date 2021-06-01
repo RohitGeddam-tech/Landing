@@ -25,9 +25,9 @@ function App() {
         </div>
       </div>
       <div className="footer" ref={myref} >
-        <button className="blackBtn" onClick={()=>document.getElementById("btn").scrollIntoView({behavior:'smooth'})}>
+        {/* <button className="blackBtn" onClick={()=>document.getElementById("btn").scrollIntoView({behavior:'smooth'})}>
           Get a Free Demo
-        </button>
+        </button> */}
         <a href="tel:18008910235" className="whiteBtn">
           Call Us
         </a>
