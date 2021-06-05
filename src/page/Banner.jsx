@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Banner.css";
 import banner from "../images/Banner-min.webp";
 import Button from "../components/Button";
