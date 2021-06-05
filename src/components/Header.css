@@ -126,4 +126,8 @@ a.head {
   .details a:hover {
     background-color: #eee;
   }
+  .imgHeader img{
+    width: 202px;
+    height: 53px;
+  }
 }
