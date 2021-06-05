@@ -3,6 +3,7 @@ import "./Banner.css";
 import banner from "../images/Banner-min.webp";
 import Button from "../components/Button";
 
+
 const Banner = () => {
   return (
     <div className="banner">
@@ -23,11 +24,7 @@ const Banner = () => {
         </div>
       </div>
       <div className="rightBanner">
-        {useEffect(()=>(
-          <>
-            <img src={banner} alt='banner' defer />
-          </>
-        ),[])}
+      <img src={banner} alt="banner" />
       </div>
       <div className="featureHeight" id="features"></div>
     </div>
