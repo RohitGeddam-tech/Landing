@@ -25,7 +25,7 @@ const Banner = () => {
       <div className="rightBanner">
         {useEffect(()=>(
           <>
-            <img src={banner} alt='banner' />
+            <img src={banner} alt='banner' defer />
           </>
         ),[])}
       </div>
