@@ -6,8 +6,8 @@ import ruppee from "../images/Payment.png";
 import hospital from "../images/blueHosp.png";
 import people from "../images/bluePeople.png";
 import circle from "../images/blueCircle.png";
-import calender from '../images/Calendar.jpg'
-import map from '../images/Map.jpg'
+import calender from '../images/Calendar-min.jpg'
+import map from '../images/Map-min.jpg'
 import "./Lab.css";
 
 const Lab = () => {

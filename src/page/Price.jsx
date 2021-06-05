@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Price.css";
-import check from "../images/check.jpg";
+import check from "../images/check-min.jpg";
 import Button from "../components/Button";
 import PriceSlider from "../components/PriceSlider";
 import YearSlider from "../components/YearSlider";

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
-import logo from "../images/logo.jpg";
+import logo from "../images/logo-min.jpg";
 // import Button from "./Button";
 import Hamburger from "hamburger-react";
 import { NavHashLink } from "react-router-hash-link";

@@ -1,5 +1,5 @@
 import React from "react";
-import offer from "../images/offer.jpg";
+import offer from "../images/offer-min.jpg";
 import "./Offer.css";
 // import OfferSlider from '../components/OfferSlider'
 import Button from "../components/Button";

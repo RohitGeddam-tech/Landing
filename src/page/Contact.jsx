@@ -1,7 +1,7 @@
 import React from "react";
 import "./Contact.css";
-import call from "../images/call.jpg";
-import mail from "../images/Mail.jpg";
+import call from "../images/call-min.jpg";
+import mail from "../images/Mail-min.jpg";
 // import callBtn from "../images/blueCallBtn.svg";
 import Form from "../components/Form";
 import white from "../images/white.svg";

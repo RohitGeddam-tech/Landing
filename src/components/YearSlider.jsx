@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import check from "../images/check.jpg";
+import check from "../images/check-min.jpg";
 import Button from "./Button";
 import SliderNextArrow from "./NextArrow";
 import SliderPrevArrow from "./PrevArrow";
