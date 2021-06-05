@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Landing/static/css/main.6bc56ec9.chunk.css",
+    "main.css": "/Landing/static/css/main.11a5a5b1.chunk.css",
     "main.js": "/Landing/static/js/main.8f3cf3cb.chunk.js",
     "main.js.map": "/Landing/static/js/main.8f3cf3cb.chunk.js.map",
     "runtime-main.js": "/Landing/static/js/runtime-main.a555a784.js",
@@ -10,7 +10,7 @@
     "static/js/2.3bdcf075.chunk.js.map": "/Landing/static/js/2.3bdcf075.chunk.js.map",
     "index.html": "/Landing/index.html",
     "static/css/2.e84f0e0d.chunk.css.map": "/Landing/static/css/2.e84f0e0d.chunk.css.map",
-    "static/css/main.6bc56ec9.chunk.css.map": "/Landing/static/css/main.6bc56ec9.chunk.css.map",
+    "static/css/main.11a5a5b1.chunk.css.map": "/Landing/static/css/main.11a5a5b1.chunk.css.map",
     "static/js/2.3bdcf075.chunk.js.LICENSE.txt": "/Landing/static/js/2.3bdcf075.chunk.js.LICENSE.txt",
     "static/media/Banner-min.1c1e25e9.jpg": "/Landing/static/media/Banner-min.1c1e25e9.jpg",
     "static/media/Calendar-min.c5178e19.jpg": "/Landing/static/media/Calendar-min.c5178e19.jpg",
@@ -22,7 +22,7 @@
     "static/js/runtime-main.a555a784.js",
     "static/css/2.e84f0e0d.chunk.css",
     "static/js/2.3bdcf075.chunk.js",
-    "static/css/main.6bc56ec9.chunk.css",
+    "static/css/main.11a5a5b1.chunk.css",
     "static/js/main.8f3cf3cb.chunk.js"
   ]
 }
