@@ -4,15 +4,21 @@ import React, { useRef } from "react";
 // import Button from './components/Button';
 import Header from "./components/Header";
 import Banner from "./page/Banner";
+import banner from "./images/Banner-min.jpg";
 import Contact from "./page/Contact";
 import Lab from "./page/Lab";
 import Offer from "./page/Offer";
 import Price from "./page/Price";
+import { Helmet } from "react-helmet";
 
 function App() {
   const myref = useRef(null);
 
   return (
+    <>
+    <Helmet>
+    <link rel="preload" as="image" href={banner} />
+    </Helmet>
     <div className="App">
       <Header />
       <div style={{ paddingTop: "64px" }}>
@@ -33,6 +39,7 @@ function App() {
         </a>
       </div>
     </div>
+    </>
   );
 }
 
