@@ -160,6 +160,10 @@
     width: 100%;
   }
 
+  .imgPatient img{
+    width: 100%;
+  }
+
   .imgBranch {
     display: none;
   }
