@@ -30,6 +30,7 @@
 
 .imgPatient img {
   width: 100%;
+  height: auto;
 }
 
 .imgBranch {
@@ -41,6 +42,7 @@
 
 .imgBranch img {
   width: 100%;
+  height: auto;
 }
 
 .branchImg {
