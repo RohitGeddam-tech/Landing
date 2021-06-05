@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Landing/static/css/main.6bc56ec9.chunk.css",
-    "main.js": "/Landing/static/js/main.2c74ca8e.chunk.js",
-    "main.js.map": "/Landing/static/js/main.2c74ca8e.chunk.js.map",
+    "main.js": "/Landing/static/js/main.7a4065ce.chunk.js",
+    "main.js.map": "/Landing/static/js/main.7a4065ce.chunk.js.map",
     "runtime-main.js": "/Landing/static/js/runtime-main.a555a784.js",
     "runtime-main.js.map": "/Landing/static/js/runtime-main.a555a784.js.map",
     "static/css/2.e84f0e0d.chunk.css": "/Landing/static/css/2.e84f0e0d.chunk.css",
-    "static/js/2.3bdcf075.chunk.js": "/Landing/static/js/2.3bdcf075.chunk.js",
-    "static/js/2.3bdcf075.chunk.js.map": "/Landing/static/js/2.3bdcf075.chunk.js.map",
+    "static/js/2.d3a5a742.chunk.js": "/Landing/static/js/2.d3a5a742.chunk.js",
+    "static/js/2.d3a5a742.chunk.js.map": "/Landing/static/js/2.d3a5a742.chunk.js.map",
     "index.html": "/Landing/index.html",
     "static/css/2.e84f0e0d.chunk.css.map": "/Landing/static/css/2.e84f0e0d.chunk.css.map",
     "static/css/main.6bc56ec9.chunk.css.map": "/Landing/static/css/main.6bc56ec9.chunk.css.map",
-    "static/js/2.3bdcf075.chunk.js.LICENSE.txt": "/Landing/static/js/2.3bdcf075.chunk.js.LICENSE.txt",
+    "static/js/2.d3a5a742.chunk.js.LICENSE.txt": "/Landing/static/js/2.d3a5a742.chunk.js.LICENSE.txt",
     "static/media/Banner-min.1c1e25e9.jpg": "/Landing/static/media/Banner-min.1c1e25e9.jpg",
     "static/media/Calendar-min.c5178e19.jpg": "/Landing/static/media/Calendar-min.c5178e19.jpg",
     "static/media/Map-min.f6acb38e.jpg": "/Landing/static/media/Map-min.f6acb38e.jpg",
@@ -21,8 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.a555a784.js",
     "static/css/2.e84f0e0d.chunk.css",
-    "static/js/2.3bdcf075.chunk.js",
+    "static/js/2.d3a5a742.chunk.js",
     "static/css/main.6bc56ec9.chunk.css",
-    "static/js/main.2c74ca8e.chunk.js"
+    "static/js/main.7a4065ce.chunk.js"
   ]
 }
