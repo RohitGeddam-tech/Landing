@@ -6,8 +6,8 @@ import ruppee from "../images/Payment.png";
 import hospital from "../images/blueHosp.png";
 import people from "../images/bluePeople.png";
 import circle from "../images/blueCircle.png";
-import calender from '../images/Calendar-min.jpg'
-import map from '../images/Map-min.jpg'
+import calender from "../images/Calendar-min.webp";
+import map from "../images/Map-min.webp";
 import "./Lab.css";
 
 const Lab = () => {
@@ -113,7 +113,7 @@ const Lab = () => {
           <img src={map} alt="patient" />
         </div>
       </div>
-      <div className='freeHeight' id='free'></div>
+      <div className="freeHeight" id="free"></div>
     </div>
   );
 };

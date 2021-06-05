@@ -1,6 +1,6 @@
 import React from "react";
 import "./Banner.css";
-import banner from "../images/Banner-min.jpg";
+import banner from "../images/Banner-min.webp";
 import Button from "../components/Button";
 
 const Banner = () => {
