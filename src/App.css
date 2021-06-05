@@ -1,6 +1,7 @@
 .App{
   width: 100%;
   overflow-x: hidden;
+  font-display: swap !important;
 }
 
 .button {
