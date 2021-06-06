@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./Header.css";
 import logo from "../images/logo-min.jpg";
-// import Button from "./Button";
 import Hamburger from "hamburger-react";
 import { NavHashLink } from "react-router-hash-link";
+import ContactRedirectBtn from "./ContactRedirectBtn";
 
 const Header = () => {
   const [isActive, setActive] = useState(false);
@@ -19,7 +19,11 @@ const Header = () => {
           <NavHashLink to="/Landing#free">Free Website</NavHashLink>
           <NavHashLink to="/Landing#price">Pricing</NavHashLink>
           <div className="alignBtn">
-            <NavHashLink to='/Landing#contact' className='head'>Get a Free Demo</NavHashLink>
+            <ContactRedirectBtn
+              name="Get a Free Demo"
+              content="Free Demo"
+              className="head"
+            />
           </div>
         </div>
       </div>
@@ -53,16 +57,10 @@ const Header = () => {
               >
                 Features
               </NavHashLink>
-              <NavHashLink
-                to="/Landing#free"
-                onClick={() => setActive(false)}
-              >
+              <NavHashLink to="/Landing#free" onClick={() => setActive(false)}>
                 Free Website
               </NavHashLink>
-              <NavHashLink
-                to="/Landing#price"
-                onClick={() => setActive(false)}
-              >
+              <NavHashLink to="/Landing#price" onClick={() => setActive(false)}>
                 Pricing
               </NavHashLink>
             </div>

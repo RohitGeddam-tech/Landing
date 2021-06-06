@@ -160,14 +160,14 @@ a.infoBtn h1{
   outline: none;
 }
 
-.p {
+.error-text {
   font-family: Helvetica;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
-  text-align: center;
   color: red;
+  margin: 0 0 5px 10px;
 }
 
 .alignbtn {

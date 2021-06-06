@@ -1,8 +1,6 @@
 import React from "react";
-// import offer from "../images/offer-min.jpg";
 import "./Offer.css";
-// import OfferSlider from '../components/OfferSlider'
-import Button from "../components/Button";
+import ContactRedirectBtn from "../components/ContactRedirectBtn";
 
 const Offer = () => {
   return (
@@ -25,7 +23,7 @@ const Offer = () => {
           <OfferSlider />
         </div> */}
         <div className='offerAlign'>
-          <Button name='Get in now' />
+          <ContactRedirectBtn name="Get in now" content="Free Website" />
         </div>
       </div>
       <div className='freeHeight' id='price'></div>

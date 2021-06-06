@@ -1,139 +1,157 @@
 import React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
-// import useToggle from './Valid'
+import Snackbar from "@material-ui/core/Snackbar";
+import Alert from "@material-ui/lab/Alert";
+import axios from "axios";
+import { getUtmSerializedString } from "../utils/common";
 
+const defaultFormState = {
+  name: "",
+  mobile: "",
+  email: "",
+};
 
 const Form = () => {
-  const [name, setName] = useState("");
-  const [phoneNo, setPhoneNo] = useState("");
-  const [emailID, setEmailID] = useState("");
-  const [nameInvalid, setNameInvalid] = useState(false);
-  const [phoneNoInvalid, setPhoneNoInvalid] = useState(false);
-  const [emailIDInvalid, setEmailIDInvalid] = useState(false);
-  // const [validity, setValidity] = useState(false);
-  const [isValid, setIsValid] = useState(false)
-  const [form, setForm] = useState({});
-  const [formEmpty, setFormEmpty] = useState(false);
-
-  // const [isOn, toggleIsOn] = useToggle();
-
-  // const classes = useStyles();
+  const [details, setDetails] = useState({ ...defaultFormState });
+  const [error, setError] = useState({});
+  const [btnLoading, setBtnLoading] = useState(false);
+  const [alertState, setAlertState] = useState({
+    open: false,
+    message: "",
+    type: "",
+  });
 
   const handleChange = (e) => {
-    switch (e.target.name) {
-      case "name":
-        setName(e.target.value);
-        setNameInvalid(!e.target.validity.valid);
-        break;
-      case "phoneNo":
-        setPhoneNo(e.target.value);
-        setPhoneNoInvalid(!e.target.validity.valid);
-        break;
-      case "emailID":
-        setEmailID(e.target.value);
-        setEmailIDInvalid(!e.target.validity.valid);
-        break;
-      default:
-        break;
-    }
+    const tempDetails = { ...details },
+      tempError = { ...error };
+    tempDetails[e.target.name] = e.target.value;
+    tempError[e.target.name] = "";
+    setDetails(tempDetails);
+    setError(tempError);
   };
 
-  // console.log('form value', form)
-  // const toggle = React.useCallback(() => setIsValid(!isValid))
+  const validateForm = () => {
+    const tempError = { ...error };
+    var nameRegExp = /^[A-Za-z\s]+$/,
+      emailRegExp = /^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/,
+      phoneRegExp = /^[0-9]{10}$/;
 
-  const handleSubmit = (e) => {
+    tempError.name =
+      (!details.name && "The name field is required.") ||
+      (!nameRegExp.test(details.name) && "The name field is invalid.");
 
-    if (!(nameInvalid && phoneNoInvalid && emailIDInvalid)) {
-      setIsValid(!isValid);
-      setForm({
-        name: name.charAt(0).toUpperCase() + name.slice(1),
-        phoneNo: phoneNo,
-        emailID: emailID,
-      });
-    } else {
-      setIsValid(false);
-    }
-    // console.log('vaidity trueor false: ', !isValid)
+    tempError.mobile =
+      (!details.mobile && "The phone number field is required.") ||
+      (!phoneRegExp.test(details.mobile) &&
+        "The phone number field is invalid.");
 
-    if(isValid === false){
-      setFormEmpty(false);
-      setIsValid(false);
-    } else {
-      setFormEmpty(true);
-    }
+    tempError.email =
+      (!details.email && "The email field is required.") ||
+      (!emailRegExp.test(details.email) && "The email field is invalid.");
 
+    setError(tempError);
+    return Object.values(tempError).some((val) => val);
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // console.log('data: ',name,phoneNo,emailID)
-    // console.log('formempty',formEmpty)
+    setError({});
+    setBtnLoading(true);
+    const errorExist = validateForm();
+
+    // make api call only if there are no errors
+    if (!errorExist) { 
+      const data = {
+        ...details,
+        type : "Landing Page",
+        description: getUtmSerializedString(),
+      };
+      try {
+        const response = await axios.post(
+          `${process.env.REACT_APP_PUBLIC_URL}/contact_us`,
+          data
+        );
+        if (response) {
+          setBtnLoading(false);
+          const {
+            message = "Your details has been saved, We will contact you shortly!",
+          } = response.data;
+          setDetails({...defaultFormState})
+          setAlertState({ open: true, message, type: "success" });
+          sessionStorage.removeItem("utm_content");
+        }
+      } catch (err) {
+        err.response && setBtnLoading(false);
+        const { message = "Sorry! We are unable to process your request." } =
+          (err.response && err.response.data) || {};
+        message && setAlertState({ open: true, message, type: "error" });
+      }
+    } else setBtnLoading(false);
+  };
+
+  const handleAlertClose = () => {
+    setAlertState({ open: false, message: "", type: "" });
   };
 
   return (
-    <form
-      className='formContainer'
-      onSubmit={handleSubmit}
-    >
-      <p className='para'>Want us to call you? Fill in your details</p>
+    <form className="formContainer" onSubmit={handleSubmit}>
+      <p className="para">Want us to call you? Fill in your details</p>
       <TextField
         id="outlined-basic"
         label="Name"
         variant="outlined"
-        className='textField'
+        className="textField"
         name="name"
-        value={name}
+        value={details.name}
         onChange={handleChange}
-        inputProps={{ pattern: "^([A-Za-z ,.'`-]{2,30})$" }}
         type="text"
-        required
       />
-      {nameInvalid ? (
-        <p className='p'>Please provide a valid name</p>
-      ) : (
-        ""
-      )}
+      {error && error.name ? <p className="error-text">{error.name}</p> : null}
       <TextField
         id="outlined-basic"
         label="Email"
         variant="outlined"
-        name="emailID"
-        className='textField'
-        value={emailID}
+        name="email"
+        className="textField"
+        value={details.email}
         onChange={handleChange}
-        inputProps={{
-          pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$",
-        }}
-        type="email"
-        required
+        type="text"
       />
-      {emailIDInvalid ? (
-        <p className='p'>Please provide a valid email</p>
-      ) : (
-        ""
-      )}
+      {error && error.email ? (
+        <p className="error-text">{error.email}</p>
+      ) : null}
       <TextField
         id="outlined-basic"
         label="Phone No."
         variant="outlined"
-        className='textField'
-        name="phoneNo"
-        value={phoneNo}
+        className="textField"
+        name="mobile"
+        value={details.mobile}
         onChange={handleChange}
-        inputProps={{
-          pattern: "^[0-9]{10}$",
-        }}
         type="tel"
-        required
       />
-      {phoneNoInvalid ? (
-        <p className='p'>Please provide a valid mobile number</p>
-      ) : (
-        ""
-      )}
-      <div className='alignbtn'>
-        <button type="submit" className="button">
-          Send
+      {error && error.mobile ? (
+        <p className="error-text">{error.mobile}</p>
+      ) : null}
+      <div className="alignbtn">
+        <button type="submit" className="button" disabled={btnLoading}>
+          {btnLoading ? "Sending..." : "Send"}
         </button>
       </div>
-      {formEmpty ? <p className='p'>Please fill in the form</p> : ""}
+      <Snackbar
+        anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+        open={alertState.open}
+        onClose={handleAlertClose}
+        autoHideDuration={5000}
+      >
+        <Alert
+          onClose={handleAlertClose}
+          severity={alertState.type}
+          variant="filled"
+        >
+          {alertState.message}
+        </Alert>
+      </Snackbar>
     </form>
   );
 };

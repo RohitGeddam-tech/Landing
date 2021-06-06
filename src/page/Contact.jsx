@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Contact.css";
 import call from "../images/call-min.jpg";
 import mail from "../images/Mail-min.jpg";
-// import callBtn from "../images/blueCallBtn.svg";
 import Form from "../components/Form";
 import white from "../images/white.svg";
-// import Button from "../components/Button";
+import { getUtmParamsObject } from "../utils/common";
 
 const Contact = () => {
+  useEffect(() => {
+    getUtmParamsObject({reset: true});
+  }, []);
   return (
     <div className="contact">
       <div className="contactContainer">

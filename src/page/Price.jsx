@@ -1,49 +1,62 @@
 import { useState } from "react";
 import "./Price.css";
-import check from "../images/check-min.jpg";
-import Button from "../components/Button";
-import PriceSlider from "../components/PriceSlider";
-import YearSlider from "../components/YearSlider";
+import PackageCard from "../components/PackageCard";
+import CustomSlider from "../components/CustomSlider";
+import useWindowSize from "../hooks/useWindowSize";
 
-const cardDetails = [
+const packageDetails = [
   {
-    name: "Small",
-    rupee: 600,
-    patients: 300,
+    label: "monthly",
+    value: [
+      {
+        name: "Small",
+        rupee: 600,
+        patients: 300,
+        validity: "30 Days",
+      },
+      {
+        name: "Medium",
+        rupee: 1500,
+        patients: 750,
+        validity: "30 Days",
+      },
+      {
+        name: "Large",
+        rupee: 2000,
+        patients: 1000,
+        validity: "30 Days",
+      },
+    ],
   },
   {
-    name: "Medium",
-    rupee: 1500,
-    patients: 750,
-  },
-  {
-    name: "Large",
-    rupee: 2000,
-    patients: 1000,
-  },
-];
-
-const yearDetails = [
-  {
-    name: "Small",
-    rupee: 7200,
-    patients: 3600,
-  },
-  {
-    name: "Medium",
-    rupee: 18000,
-    patients: 9000,
-  },
-  {
-    name: "Large",
-    rupee: 24000,
-    patients: 12000,
+    label: "yearly",
+    value: [
+      {
+        name: "Small",
+        rupee: 7200,
+        patients: 3600,
+        validity: "1 Year",
+      },
+      {
+        name: "Medium",
+        rupee: 18000,
+        patients: 9000,
+        validity: "1 Year",
+      },
+      {
+        name: "Large",
+        rupee: 24000,
+        patients: 12000,
+        validity: "1 Year",
+      },
+    ],
   },
 ];
 
 const Price = () => {
-  const [toggleState, setToggleState] = useState(1);
-
+  const [toggleState, setToggleState] = useState("monthly");
+  const [width] = useWindowSize();
+  
   const toggleTab = (index) => {
     setToggleState(index);
   };
@@ -55,14 +68,16 @@ const Price = () => {
         <div className="container">
           <div className="bloc-tabs">
             <button
-              className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
-              onClick={() => toggleTab(1)}
+              className={
+                toggleState === "monthly" ? "tabs active-tabs" : "tabs"
+              }
+              onClick={() => toggleTab("monthly")}
             >
               Monthly Pack
             </button>
             <button
-              className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
-              onClick={() => toggleTab(2)}
+              className={toggleState === "yearly" ? "tabs active-tabs" : "tabs"}
+              onClick={() => toggleTab("yearly")}
             >
               Yearly Pack
             </button>
@@ -70,89 +85,28 @@ const Price = () => {
           <div className="divider"></div>
         </div>
         <div className="content-tabs">
-          <div
-            className={
-              toggleState === 1 ? "content  active-content" : "content"
-            }
-          >
-            <div className="allcards">
-              {cardDetails.map((doc) => (
-                <div className="cards" key={doc.rupee}>
-                  <div className="cardHeader">
-                    <h1>{doc.name}</h1>
-                    <h2> ₹{doc.rupee}</h2>
-                  </div>
-                  <div className="divider"></div>
-                  <div className="cardInfo">
-                    <div className="info">
-                      <img src={check} alt="check" />
-                      <div className="point1">
-                        <h1> Add upto </h1> <h2>{doc.patients} Patients</h2>
-                      </div>
-                    </div>
-                    <div className="info">
-                      <img src={check} alt="check" />
-                      <h1>Validity: 30 days</h1>
-                    </div>
-                    <div className="info">
-                      <img src={check} alt="check" />
-                      <h1>All features included</h1>
-                    </div>
-                  </div>
-                  <div className="cardAlign">
-                    <Button name="Try it out" />
-                  </div>
+          {packageDetails.map(({ label, value }) => (
+            <div
+              className={`content ${label === toggleState && "active-content"}`}
+              key={label}
+            >
+              {width <= 767 ? (
+                <div className="priceSlider">
+                  <CustomSlider>
+                    {value.map((item) => (
+                      <PackageCard {...item} />
+                    ))}
+                  </CustomSlider>{" "}
                 </div>
-              ))}
-            </div>
-            <div className="priceSlider">
-              <PriceSlider />
-            </div>
-          </div>
-
-          <div
-            className={
-              toggleState === 2 ? "content  active-content" : "content"
-            }
-          >
-            <div className="allcards">
-              {yearDetails.map((doc) => (
-                <div className="cards" key={doc.rupee}>
-                  <div className="cardHeader">
-                    <h1>{doc.name}</h1>
-                    <h2> ₹{doc.rupee}</h2>
-                  </div>
-                  <div className="divider"></div>
-                  <div className="cardInfo">
-                    <div className="info">
-                      <img src={check} alt="check" />
-                      <div className="point1">
-                        <h1> Add upto </h1> <h2>{doc.patients} Patients</h2>
-                      </div>
-                    </div>
-                    <div className="info">
-                      <img src={check} alt="check" />
-                      <h1>Validity: 1 year</h1>
-                    </div>
-                    <div className="info">
-                      <img src={check} alt="check" />
-                      <h1>All features included</h1>
-                    </div>
-                    <div className="info">
-                      <img src={check} alt="check" />
-                      <h1>Get a free website*</h1>
-                    </div>
-                  </div>
-                  <div className="cardAlign">
-                    <Button name="Try it out" />
-                  </div>
+              ) : (
+                <div className="allcards">
+                  {value.map((item) => (
+                    <PackageCard {...item} />
+                  ))}
                 </div>
-              ))}
+              )}
             </div>
-            <div className="priceSlider">
-              <YearSlider />
-            </div>
-          </div>
+          ))}
         </div>
       </div>
       <div className="freeHeight" id="contact"></div>

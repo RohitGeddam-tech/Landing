@@ -1,7 +1,7 @@
 import React from "react";
 import "./Banner.css";
 import banner from "../images/Banner-min.webp";
-import Button from "../components/Button";
+import ContactRedirectBtn from "../components/ContactRedirectBtn";
 
 
 const Banner = () => {
@@ -16,7 +16,7 @@ const Banner = () => {
             anywhere.
           </p>
           <div className="bannerAlign">
-            <Button name="Get a Free Demo" />
+            <ContactRedirectBtn name="Get a Free Demo" content="Free Demo" />
           </div>
         </div>
         <div className="bannerRight">
