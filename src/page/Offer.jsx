@@ -1,5 +1,5 @@
 import React from "react";
-import offer from "../images/offer-min.jpg";
+// import offer from "../images/offer-min.jpg";
 import "./Offer.css";
 // import OfferSlider from '../components/OfferSlider'
 import Button from "../components/Button";
@@ -13,14 +13,14 @@ const Offer = () => {
           With our yearly package, you can get your own website built for free*
           (*maintainence charges appiled)
         </p>
-        <div className="offerImg">
+        {/* <div className="offerImg">
           <div className="img1">
             <img src={offer} alt="empty" />
           </div>
           <div className="img2">
             <img src={offer} alt="empty" />
           </div>
-        </div>
+        </div> */}
         {/* <div className='imgOffer'>
           <OfferSlider />
         </div> */}
