@@ -1,8 +1,9 @@
 import React from "react";
 import "./Banner.css";
 import banner from "../images/Banner-min.webp";
+// import banner from "../../public/Banner-min.webp";
 import Button from "../components/Button";
-
+// import { Helmet } from "react-helmet";
 
 const Banner = () => {
   return (
@@ -24,7 +25,7 @@ const Banner = () => {
         </div>
       </div>
       <div className="rightBanner">
-      <img src={banner} alt="banner" />
+        <img src={banner} alt="banner" />
       </div>
       <div className="featureHeight" id="features"></div>
     </div>
