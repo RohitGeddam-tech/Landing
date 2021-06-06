@@ -101,7 +101,9 @@
   }
 
   .bannerAlign {
-    display: none;
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 0;
   }
 
   .bannerRight{
