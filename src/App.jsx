@@ -9,7 +9,8 @@ import Contact from "./page/Contact";
 import Lab from "./page/Lab";
 import Offer from "./page/Offer";
 import Price from "./page/Price";
-// import { Helmet } from "react-helmet";
+import banner from "./images/Banner-min.webp";
+import { Helmet } from "react-helmet";
 
 function App() {
   const myref = useRef(null);
@@ -17,6 +18,14 @@ function App() {
   return (
     <>
       <div className="App">
+      <Helmet>
+      <link
+        rel="preload"
+        as="image"
+        href={banner}
+        type='image/webp'
+      />
+    </Helmet>
         <Header />
         <div style={{ paddingTop: "64px" }}>
           <Banner />
