@@ -13,18 +13,30 @@ const packageDetails = [
         rupee: 600,
         patients: 300,
         validity: "30 Days",
+        feature: {
+          first: "All features added",
+          second:null,
+        },
       },
       {
         name: "Medium",
         rupee: 1500,
         patients: 750,
         validity: "30 Days",
+        feature: {
+          first: "All features added",
+          second:null,
+        },
       },
       {
         name: "Large",
         rupee: 2000,
         patients: 1000,
         validity: "30 Days",
+        feature: {
+          first: "All features added",
+          second:null,
+        },
       },
     ],
   },
@@ -36,18 +48,30 @@ const packageDetails = [
         rupee: 7200,
         patients: 3600,
         validity: "1 Year",
+        feature: {
+          first: "All features added",
+          second: "Get free website*",
+        },
       },
       {
         name: "Medium",
         rupee: 18000,
         patients: 9000,
         validity: "1 Year",
+        feature: {
+          first: "All features added",
+          second: "Get free website*",
+        },
       },
       {
         name: "Large",
         rupee: 24000,
         patients: 12000,
         validity: "1 Year",
+        feature: {
+          first: "All features added",
+          second: "Get free website*",
+        },
       },
     ],
   },
@@ -56,7 +80,7 @@ const packageDetails = [
 const Price = () => {
   const [toggleState, setToggleState] = useState("monthly");
   const [width] = useWindowSize();
-  
+
   const toggleTab = (index) => {
     setToggleState(index);
   };
