@@ -15,7 +15,7 @@ const packageDetails = [
         validity: "30 Days",
         feature: {
           first: "All features added",
-          second:null,
+          second: null,
         },
       },
       {
@@ -25,7 +25,7 @@ const packageDetails = [
         validity: "30 Days",
         feature: {
           first: "All features added",
-          second:null,
+          second: null,
         },
       },
       {
@@ -35,7 +35,7 @@ const packageDetails = [
         validity: "30 Days",
         feature: {
           first: "All features added",
-          second:null,
+          second: null,
         },
       },
     ],
@@ -92,6 +92,7 @@ const Price = () => {
         <div className="container">
           <div className="bloc-tabs">
             <button
+              aria-label="monthlyPack"
               className={
                 toggleState === "monthly" ? "tabs active-tabs" : "tabs"
               }
@@ -100,6 +101,7 @@ const Price = () => {
               Monthly Pack
             </button>
             <button
+              aria-label="yearPack"
               className={toggleState === "yearly" ? "tabs active-tabs" : "tabs"}
               onClick={() => toggleTab("yearly")}
             >

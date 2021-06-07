@@ -7,6 +7,7 @@ const SliderNextArrow = (props) => {
   return (
     <button
       type="button"
+      aria-label='nextArrow'
       data-role="none"
       className="slick-arrow slickNext"
       style={{ display: "block" }}

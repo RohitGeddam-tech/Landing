@@ -7,6 +7,7 @@ const SliderPrevArrow = (props) => {
   return (
     <button
       type="button"
+      aria-label='prevArrow'
       data-role="none"
       className="slick-arrow slickPrev"
       style={{ display: "block" }}

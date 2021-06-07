@@ -30,7 +30,7 @@ const Header = () => {
       <div className="nav">
         <div className={container}>
           <div className="up">
-            <button onClick={() => setActive(!isActive)}>
+            <button aria-label='click' onClick={() => setActive(!isActive)}>
               <Hamburger
                 direction="left"
                 className="ham"

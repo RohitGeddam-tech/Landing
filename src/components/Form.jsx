@@ -134,7 +134,7 @@ const Form = () => {
         <p className="error-text">{error.mobile}</p>
       ) : null}
       <div className="alignbtn">
-        <button type="submit" className="button" disabled={btnLoading}>
+        <button type="submit" className="button" aria-label='submit' disabled={btnLoading}>
           {btnLoading ? "Sending..." : "Send"}
         </button>
       </div>
