@@ -15,9 +15,9 @@ const Header = () => {
           <img src={logo} alt="logo" />
         </NavHashLink>
         <div className="details">
-          <NavHashLink to="/Landing#features">Features</NavHashLink>
-          <NavHashLink to="/Landing#free">Free Website</NavHashLink>
-          <NavHashLink to="/Landing#price">Pricing</NavHashLink>
+          <NavHashLink to="/Landing#featureInBanner">Features</NavHashLink>
+          <NavHashLink to="/Landing#freeWebsiteInLab">Free Website</NavHashLink>
+          <NavHashLink to="/Landing#pricingInOffer">Pricing</NavHashLink>
           <div className="alignBtn">
             <ContactRedirectBtn
               name="Get a Free Demo"
@@ -52,15 +52,15 @@ const Header = () => {
           {isActive ? (
             <div className="details">
               <NavHashLink
-                to="/Landing#features"
+                to="/Landing#featureInBanner"
                 onClick={() => setActive(false)}
               >
                 Features
               </NavHashLink>
-              <NavHashLink to="/Landing#free" onClick={() => setActive(false)}>
+              <NavHashLink to="/Landing#freeWebsiteInLab" onClick={() => setActive(false)}>
                 Free Website
               </NavHashLink>
-              <NavHashLink to="/Landing#price" onClick={() => setActive(false)}>
+              <NavHashLink to="/Landing#pricingInOffer" onClick={() => setActive(false)}>
                 Pricing
               </NavHashLink>
             </div>

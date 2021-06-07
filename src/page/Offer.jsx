@@ -26,7 +26,7 @@ const Offer = () => {
           <ContactRedirectBtn name="Get in now" content="Free Website" />
         </div>
       </div>
-      <div className='freeHeight' id='price'></div>
+      <div className='freeHeight' id='pricingInOffer'></div>
     </div>
   );
 };

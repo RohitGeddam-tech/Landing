@@ -6,6 +6,7 @@ const ContactRedirectBtn = ({ name, content, className = "button" }) => {
     <NavHashLink
       to="/Landing#contact"
       className={className}
+      name={name}
       onClick={() => sessionStorage.setItem("utm_content", content)}
     >
       {name}

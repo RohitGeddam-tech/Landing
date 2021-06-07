@@ -26,7 +26,7 @@ const Banner = () => {
       <div className="rightBanner">
       <img src={banner} alt="banner" srcSet='Banner-min.webp 100vw' />
       </div>
-      <div className="featureHeight" id="features"></div>
+      <div className="featureHeight" id="featureInBanner"></div>
     </div>
   );
 };

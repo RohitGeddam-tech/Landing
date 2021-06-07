@@ -113,7 +113,7 @@ const Lab = () => {
           <img src={map} alt="patient" />
         </div>
       </div>
-      <div className="freeHeight" id="free"></div>
+      <div className="freeHeight" id="freeWebsiteInLab"></div>
     </div>
   );
 };
