@@ -24,7 +24,7 @@ const Banner = () => {
         </div>
       </div>
       <div className="rightBanner">
-      <img src={banner} alt="banner" />
+      <img src={banner} alt="banner" srcSet='Banner-min.webp 100vw' />
       </div>
       <div className="featureHeight" id="features"></div>
     </div>
