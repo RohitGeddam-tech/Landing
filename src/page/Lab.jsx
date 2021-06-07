@@ -18,7 +18,7 @@ const Lab = () => {
       </div>
       <div className="patient">
         <div className="imgPatient">
-          <img src={calender} alt="patient" />
+          <img src={calender} alt="patient" srcSet='Calendar-min.webp 100vw' />
         </div>
         <div className="patientDetails">
           <h1>Patient Management</h1>
