@@ -4,7 +4,7 @@ import ContactRedirectBtn from "./ContactRedirectBtn";
 
 const PackageCard = ({ rupee, patients, name, validity, feature }) => {
   return (
-    <div className="cards">
+    <div className="cards" key={rupee}>
       <div className="cardHeader">
         <h1>{name}</h1>
         <h2> ₹{rupee}</h2>
