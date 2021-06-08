@@ -3,9 +3,11 @@ import "./Banner.css";
 import banner from "../images/Banner-min.webp";
 import bannerJpg from "../images/Banner.jpg";
 import ContactRedirectBtn from "../components/ContactRedirectBtn";
-
+import useWindowSize from "../hooks/useWindowSize";
 
 const Banner = () => {
+  const [width] = useWindowSize();
+
   return (
     <div className="banner">
       <div className="bannerContainer">
@@ -20,12 +22,15 @@ const Banner = () => {
             <ContactRedirectBtn name="Get a Free Demo" content="Free Demo" />
           </div>
         </div>
-        <div className="bannerRight">
-          <img src={banner} alt="banner" />
-        </div>
-      </div>
-      <div className="rightBanner">
-      <img src={bannerJpg} alt="bannerjpg" />
+        {width <= 780 ? (
+          <div className="rightBanner">
+            <img src={bannerJpg} alt="bannerjpg" />
+          </div>
+        ) : (
+          <div className="bannerRight">
+            <img src={banner} alt="banner" />
+          </div>
+        )}
       </div>
       <div className="featureHeight" id="featureInBanner"></div>
     </div>
