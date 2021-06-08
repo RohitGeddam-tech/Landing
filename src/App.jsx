@@ -18,14 +18,9 @@ function App() {
   return (
     <>
       <div className="App">
-      <Helmet>
-      <link
-        rel="preload"
-        as="image"
-        href={banner}
-        type='image/jpg'
-      />
-    </Helmet>
+        <Helmet>
+          <link rel="preload" as="image" href={banner} type="image/jpg" />
+        </Helmet>
         <Header />
         <div style={{ paddingTop: "64px" }}>
           <Banner />
