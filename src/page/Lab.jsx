@@ -6,7 +6,7 @@ import ruppee from "../images/Payment.png";
 import hospital from "../images/blueHosp.png";
 import people from "../images/bluePeople.png";
 import circle from "../images/blueCircle.png";
-import calender from "../images/Calendar-min.webp";
+import calender from "../images/Calendar.jpg";
 import map from "../images/Map-min.webp";
 import "./Lab.css";
 
