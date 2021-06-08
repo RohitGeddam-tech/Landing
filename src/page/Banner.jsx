@@ -24,7 +24,7 @@ const Banner = () => {
         </div>
         {width <= 780 ? (
           <div className="rightBanner">
-            <img src={bannerJpg} alt="bannerjpg" />
+            <img src={bannerJpg} alt="bannerjpg" loading='lazy' />
           </div>
         ) : (
           <div className="bannerRight">
