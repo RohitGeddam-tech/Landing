@@ -1,6 +1,7 @@
 import React from "react";
 import "./Banner.css";
 import banner from "../images/Banner-min.webp";
+import bannerJpg from "../images/Banner.jpg";
 import ContactRedirectBtn from "../components/ContactRedirectBtn";
 
 
@@ -24,11 +25,11 @@ const Banner = () => {
         </div>
       </div>
       <div className="rightBanner">
-      <img src={banner} alt="banner" srcSet='Banner-min.webp 100vw' />
+      <img src={bannerJpg} alt="bannerjpg" />
       </div>
       <div className="featureHeight" id="featureInBanner"></div>
     </div>
   );
 };
-
+// srcSet='Banner-min.webp 100vw'
 export default Banner;
