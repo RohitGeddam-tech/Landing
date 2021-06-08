@@ -9,7 +9,7 @@ import Contact from "./page/Contact";
 import Lab from "./page/Lab";
 import Offer from "./page/Offer";
 import Price from "./page/Price";
-import banner from "./images/Banner.jpg";
+// import banner from "./images/Banner.jpg";
 import { Helmet } from "react-helmet";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
     <>
       <div className="App">
         <Helmet>
-          <link rel="preload" as="image" href={banner} type="image/jpg" loading='lazy'/>
+          <link rel="preload" as="image" href='Banner.jpg' type="image/jpg" loading='lazy'/>
         </Helmet>
         <Header />
         <div style={{ paddingTop: "64px" }}>
