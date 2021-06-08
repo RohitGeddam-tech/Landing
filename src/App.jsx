@@ -9,7 +9,7 @@ import Contact from "./page/Contact";
 import Lab from "./page/Lab";
 import Offer from "./page/Offer";
 import Price from "./page/Price";
-import banner from "./images/Banner-min.webp";
+import banner from "./images/Banner.jpg";
 import { Helmet } from "react-helmet";
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
         rel="preload"
         as="image"
         href={banner}
-        type='image/webp'
+        type='image/jpg'
       />
     </Helmet>
         <Header />
