@@ -1,6 +1,6 @@
 import React from "react";
 import "./Banner.css";
-import banner from "../images/Banner-min.webp";
+// import banner from "../images/Banner-min.webp";
 import bannerJpg from "../images/Banner.jpg";
 import ContactRedirectBtn from "../components/ContactRedirectBtn";
 import useWindowSize from "../hooks/useWindowSize";
@@ -28,7 +28,7 @@ const Banner = () => {
           </div>
         ) : (
           <div className="bannerRight">
-            <img src={banner} alt="banner" />
+          <img src={bannerJpg} alt="bannerjpg" loading='lazy' />
           </div>
         )}
       </div>

@@ -19,7 +19,7 @@ function App() {
     <>
       <div className="App">
         <Helmet>
-          <link rel="preload" as="image" href={banner} type="image/jpg" />
+          <link rel="preload" as="image" href={banner} type="image/jpg" loading='lazy'/>
         </Helmet>
         <Header />
         <div style={{ paddingTop: "64px" }}>
