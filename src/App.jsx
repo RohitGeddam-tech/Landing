@@ -1,7 +1,7 @@
 // import { NavHashLink } from "react-router-hash-link";
 import "./App.css";
 import React, { useRef } from "react";
-// import {useEffect}  from 'react'
+import { useEffect } from "react";
 // import Button from './components/Button';
 import Header from "./components/Header";
 import Banner from "./page/Banner";
@@ -26,14 +26,14 @@ function App() {
   //   return () => clearTimeout(timer);
   // }, []);
 
-  // useEffect(()=>{
-  //   window.addEventListener('load', function(){
-  //     const newScript = document.createElement("script");
-  //     newScript.src = "https://code.jivosite.com/widget/08Jhz6EcuN";
-  //     const target = document.querySelector('head')
-  //     target.appendChild(newScript);
-  //   })
-  // },[])
+  useEffect(()=>{
+    window.addEventListener('load', function(){
+      const newScript = document.createElement("script");
+      newScript.src = "https://code.jivosite.com/widget/08Jhz6EcuN";
+      const target = document.querySelector('head')
+      target.appendChild(newScript);
+    })
+  },[])
 
   return (
     <>
