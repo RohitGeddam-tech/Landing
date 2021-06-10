@@ -29,7 +29,7 @@ function App() {
     window.addEventListener('load', function(){
       const newScript = document.createElement("script");
       newScript.src = "https://code.jivosite.com/widget/08Jhz6EcuN";
-      const target = document.querySelector('body')
+      const target = document.querySelector('head')
       target.appendChild(newScript);
     })
   },[])
