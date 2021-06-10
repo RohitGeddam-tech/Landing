@@ -44,10 +44,11 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <!-- <script defer src="https://code.jivosite.com/widget/08Jhz6EcuN" ></script> -->
-    <script defer>
+    <script>
       window.addEventListener("load", function () {
         const newScript = document.createElement("script");
         newScript.src = "https://code.jivosite.com/widget/08Jhz6EcuN";
+        newScript.defer = true;
         const target = document.querySelector("body");
         target.appendChild(newScript);
       });
