@@ -1,6 +1,6 @@
 // import { NavHashLink } from "react-router-hash-link";
 import "./App.css";
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 // import Button from './components/Button';
 import Header from "./components/Header";
 import Banner from "./page/Banner";
@@ -15,11 +15,27 @@ import { Helmet } from "react-helmet";
 function App() {
   const myref = useRef(null);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const newScript = document.createElement("script");
+      newScript.src = "https://code.jivosite.com/widget/08Jhz6EcuN";
+      const target = document.querySelector('head')
+      target.appendChild(newScript);
+    }, 4000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       <div className="App">
         <Helmet>
-          <link rel="preload" as="image" href='Banner.jpg' type="image/jpg" loading='lazy'/>
+          <link
+            rel="preload"
+            as="image"
+            href="Banner.jpg"
+            type="image/jpg"
+            loading="lazy"
+          />
         </Helmet>
         <Header />
         <div style={{ paddingTop: "64px" }}>
