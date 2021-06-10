@@ -16,24 +16,31 @@ import { Helmet } from "react-helmet";
 function App() {
   const myref = useRef(null);
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     const newScript = document.createElement("script");
-  //     newScript.src = "https://code.jivosite.com/widget/08Jhz6EcuN";
-  //     const target = document.querySelector('head')
-  //     target.appendChild(newScript);
-  //   }, 4000);
-  //   return () => clearTimeout(timer);
-  // }, []);
-
-  useEffect(()=>{
-    window.addEventListener('load', function(){
+  useEffect(() => {
+    const timer = setTimeout(() => {
       const newScript = document.createElement("script");
       newScript.src = "https://code.jivosite.com/widget/08Jhz6EcuN";
-      const target = document.querySelector('head')
+      const target = document.querySelector("head");
       target.appendChild(newScript);
-    })
-  },[])
+    }, 4000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("load", function () {
+      // const newScript = document.createElement("script");
+      // newScript.src = "https://code.jivosite.com/widget/08Jhz6EcuN";
+      // const target = document.querySelector('head')
+      // target.appendChild(newScript);
+      const timer = setTimeout(() => {
+        const newScript = document.createElement("script");
+        newScript.src = "https://code.jivosite.com/widget/08Jhz6EcuN";
+        const target = document.querySelector("head");
+        target.appendChild(newScript);
+      }, 2000);
+      return () => clearTimeout(timer);
+    });
+  }, []);
 
   return (
     <>
