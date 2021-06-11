@@ -1,5 +1,5 @@
 import React from "react";
-import prev from "../images/prev.png";
+import prev from "../images/Prev.png";
 
 const SliderPrevArrow = (props) => {
   const { onClick } = props;
