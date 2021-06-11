@@ -63,7 +63,7 @@ const Form = () => {
     if (!errorExist) { 
       const data = {
         ...details,
-        type : "Landing Page",
+        type : "landing_page",
         description: getUtmSerializedString(),
       };
       try {
